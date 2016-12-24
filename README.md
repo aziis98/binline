@@ -30,8 +30,8 @@ console.log('Hello World!');
 
 ```
 
-To let the thing work you need to setup the files in your `package.json`:
-```json
+To let the thing work you need to setup the files to compile in your `package.json`:
+```
 {
 	...
 	"bline": {
