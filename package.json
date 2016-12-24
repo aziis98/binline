@@ -1,5 +1,5 @@
 {
-  "name": "bline",
+  "name": "binline",
   "version": "1.0.0",
   "description": "A pocket build tool for simple file inlining",
   "main": "index.js",
