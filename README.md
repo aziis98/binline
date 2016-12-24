@@ -44,3 +44,39 @@ To let the thing work you need to setup the files to compile in your `package.js
 ```
 
 Just call `bline` from the shell to build everything
+
+## Going advanced
+
+For now you can only use `@inline`, but the expressions can become more complex.
+Advanced command to uglify the code:
+```html
+	...
+	{{
+		@inline "./app.js"
+		| content => require('uglify-js').minify(content, { fromString: true }).code
+	}}
+	...
+```
+You may pass more commands separated by a `|`. After the first directive (`@inline`) the bline expects a
+series of arrow function transform text.
+
+## Future
+
+### 1
+
+Add a way to predefine transformers:
+```html
+	...
+	{{ @define uglify | content => require('uglify-js').minify(content, { fromString: true }).code }}
+	...
+```
+and use them:
+```html
+	...
+	{{ @inline "./app.js" | uglify }}
+	...
+```
+
+### 2
+
+When predefined trasformers will be a thing I might add a small registry with a list of common transformers (uglify, babel, sass, less, coffeescript, ...) 
