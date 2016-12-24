@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Testing Bline</title>
+</head>
+
+<body>
+
+	<script>
+		(function(exports) {
+			'use strict';
+
+			// Inlining app.js directly
+			{{
+				@noinline "./app.js"
+			}}
+
+			// Inlining app.js uglified
+			{{
+				@inline "./app.js"
+				| content => require('uglify-js').minify(content, { fromString: true }).code
+			}}
+
+		}(window));
+	</script>
+
+</body>
+
+</html>

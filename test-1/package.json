@@ -1,0 +1,21 @@
+{
+  "name": "test-1",
+  "version": "1.0.0",
+  "author": "aziis98",
+  "license": "MIT",
+  "description": "A test package",
+  "scripts": {
+    "build": "node ../index.js ./test-1"
+  },
+  "bline": {
+    "files": [
+      {
+        "from": "./src/index.html",
+        "to": "./out/index.html"
+      }
+    ]
+  },
+  "devDependencies": {
+    "uglify-js": "^2.7.5"
+  }
+}

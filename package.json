@@ -1,0 +1,20 @@
+{
+  "name": "bline",
+  "version": "1.0.0",
+  "description": "A pocket build tool for simple file inlining",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "build",
+    "tool",
+    "js",
+    "inline"
+  ],
+  "author": "aziis98",
+  "license": "MIT",
+  "devDependencies": {
+    "uglify-js": "^2.7.5"
+  }
+}
