@@ -1,4 +1,4 @@
-# Bline
+# Binline
 
 A pocket build tool for web-development (or more).
 (motto: The build system for the lazy developer)
@@ -34,7 +34,7 @@ To let the thing work you need to setup the files to compile in your `package.js
 ```
 {
 	...
-	"bline": {
+	"binline": {
 		"files": [
 			{ "from": "./index.html", "to": "./public/index.html" }
 		]
@@ -43,7 +43,7 @@ To let the thing work you need to setup the files to compile in your `package.js
 }
 ```
 
-Just call `bline` from the shell to build everything
+Just call `binline` from the shell to build everything
 
 ## Going advanced
 
@@ -57,7 +57,7 @@ Advanced command to uglify the code:
 	}}
 	...
 ```
-You may pass more commands separated by a `|`. After the first directive (`@inline`) the bline expects a
+You may pass more commands separated by a `|`. After the first directive (`@inline`) the binline expects a
 series of arrow function transform text.
 
 ## Future
